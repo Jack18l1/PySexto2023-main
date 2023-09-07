@@ -2,7 +2,7 @@
 $id = isset($datos['id'])?$datos['id']:'';
 $nombre = isset($datos['nombre'])?$datos['nombre']:'';
 $esNuevo = isset($datos['id'])?0:1;
-$titulo = $esNuevo==1?'Nuevo Oficina':'Editando Oficina';
+$titulo = $esNuevo==1?'Nuevo Cargo':'Editando Cargo';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,18 +13,18 @@ $titulo = $esNuevo==1?'Nuevo Oficina':'Editando Oficina';
 </head>
 <body>
     <h1><?=$titulo?></h1>
-    <form action="?ctrl=CtrlCargo&accion=guardar" method="post">
+    <form action="?ctrl=Ctrlsistemas_operativos&accion=guardar" method="post">
         id:
         <input type="text" name="id" value="<?=$id?>">
         <input type="hidden" name="esNuevo" value="<?=$esNuevo?>">
         <br>
-        Oficinas:
+        Cargo:
         <input type="text" name="nombre" value="<?=$nombre?>">
         <br>
         <input type="submit" value="Guardar">
 
     </form>
 
-    <a href="?ctrl=CtrlCargo">Retornar</a>
+    <a href="?ctrl=Ctrlsistemas_operativos">Retornar</a>
 </body>
 </html>

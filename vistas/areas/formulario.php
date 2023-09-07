@@ -1,5 +1,5 @@
 <?php
-$id = isset($datos['id'])?$datos['id']:'';
+$idareas = isset($datos['id'])?$datos['id']:'';
 $nombre = isset($datos['nombre'])?$datos['nombre']:'';
 $esNuevo = isset($datos['id'])?0:1;
 $titulo = $esNuevo==1?'Nuevo Cargo':'Editando Cargo';
@@ -14,11 +14,11 @@ $titulo = $esNuevo==1?'Nuevo Cargo':'Editando Cargo';
 <body>
     <h1><?=$titulo?></h1>
     <form action="?ctrl=CtrlAreas&accion=guardar" method="post">
-        id:
+        Id:
         <input type="text" name="id" value="<?=$idareas?>">
         <input type="hidden" name="esNuevo" value="<?=$esNuevo?>">
         <br>
-        Cargo:
+        Areas:
         <input type="text" name="nombre" value="<?=$nombre?>">
         <br>
         <input type="submit" value="Guardar">

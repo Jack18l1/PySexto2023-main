@@ -31,7 +31,16 @@ class CtrlPrincipal extends Controlador {
         return [
             'CtrlCargo'=>'Cargos',
             'CtrlAreas'=>'Areas',
-            'CtrlFactorForma'=>'Factores de Forma',
+            'CtrlOficinas'=>'Oficinas',
+            'CtrlTipos_disco'=>'Tipos disco',
+            'CtrlEstados'=>'Estados',
+            'CtrlSw_antivirus'=>'Sw_antivirus',
+            'CtrlMarcas_mu'=>'Marcas muebles',
+            'Ctrlfactores_forma'=>'Factores_Forma',
+            'Ctrlbienes'=>'bienes',
+            'Ctrlsistemas_operativos'=>'sistemas_operativos',
+            'CtrlMarcas_eq'=>'Marcas Equipos',
+            'CtrlTipos_procesadores'=>'Tipos de Procesadores',
         ];
     }
 }

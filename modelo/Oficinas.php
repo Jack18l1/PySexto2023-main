@@ -1,13 +1,13 @@
 <?php
 require_once './core/Modelo.php';
 
-class areas extends Modelo {
+class Oficinas extends Modelo {
     private $id;
     private $nombre;
-    private $_tabla='areas';
+    private $_tabla='oficinas';
 
-    public function __construct($idareas=null,$nombre=null){
-        $this->idareas = $idareas;
+    public function __construct($id=null,$nombre=null){
+        $this->id = $id;
         $this->nombre=$nombre;
         parent::__construct($this->_tabla);
     }
@@ -15,24 +15,24 @@ class areas extends Modelo {
         return $this->getAll();
     }
     public function eliminar(){
-        return $this->deleteById($this->idareas);
+        return $this->deleteById($this->id);
     }
     public function guardar(){
         $datos = [
-            'idareas'=>$this->idareas,
+            'id'=>$this->id,
             'nombre'=>"'$this->nombre'",
         ];
         return $this->insert($datos);
     }
     public function editar(){
-        return $this->getById($this->idareas);
+        return $this->getById($this->id);
     }
     public function actualizar(){
         $datos = [
-            'idareas'=>$this->idareas,
+            'id'=>$this->id,
             'nombre'=>"'$this->nombre'",
         ];
-        $wh = "idareas=$this->idareas";
+        $wh = "id=$this->id";
         return $this->update($wh,$datos);
     }
 }

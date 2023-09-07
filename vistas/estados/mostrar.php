@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1><?=$titulo?></h1>
-<a href="?ctrl=CtrlAreas&accion=nuevo">Nuevo Cargo</a>
+<a href="?ctrl=CtrlEstados&accion=nuevo">Nuevo Estados</a>
     <table class="table">
         <tr>
             <th>Id</th>
-            <th>Areas</th>
+            <th>Estados</th>
             <th>Opciones</th>
         </tr>
 <?php
@@ -21,16 +21,16 @@ foreach ($datos as $d) {
     ?>
 <tr>
     <td>
-        <?=$d['idareas']?>
+        <?=$d['id']?>
     </td>
     <td>
         <?=$d['nombre']?>
     </td>
     <td>
-        <a href="?ctrl=CtrlAreas&accion=editar&idareas=<?=$d['idareas']?>">
+        <a href="?ctrl=CtrlEstados&accion=editar&id=<?=$d['id']?>">
             Editar
         </a>
-        <a href="?ctrl=CtrlAreas&accion=eliminar&idareas=<?=$d['idareas']?>">Eliminar</a>
+        <a href="?ctrl=CtrlEstados&accion=eliminar&id=<?=$d['id']?>">Eliminar</a>
         
     </td>
 </tr>
