@@ -8,7 +8,7 @@ class CtrlAreas extends Controlador {
         $obj = new Areas;
         $data = $obj->getTodo();
 
-        # var_dump($data);exit;
+        # var_dump($data);exit;//
 
         $datos = [
             'titulo'=>'Areas',
