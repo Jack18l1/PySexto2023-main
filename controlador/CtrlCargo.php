@@ -4,7 +4,7 @@ require_once './modelo/Cargo.php';
 
 class CtrlCargo extends Controlador {
     public function index(){
-        # echo "Hola Cargo";
+        # //echo "Hola Cargo";
         $obj = new Cargo;
         $data = $obj->getTodo();
 
